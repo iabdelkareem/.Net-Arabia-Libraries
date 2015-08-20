@@ -1,0 +1,8 @@
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\bin\Debug\Demo.exe.config
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\bin\Debug\Demo.exe
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\bin\Debug\Demo.pdb
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\bin\Debug\ArabiaExtensions.dll
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\bin\Debug\ArabiaExtensions.pdb
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\obj\Debug\Demo.exe
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\Demo\obj\Debug\Demo.pdb

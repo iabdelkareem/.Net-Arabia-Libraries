@@ -1,0 +1,5 @@
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\ArabiaExtensions\bin\Debug\ArabiaExtensions.dll
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\ArabiaExtensions\bin\Debug\ArabiaExtensions.pdb
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\ArabiaExtensions\obj\Debug\ArabiaExtensions.csprojResolveAssemblyReference.cache
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\ArabiaExtensions\obj\Debug\ArabiaExtensions.dll
+c:\users\ibrahim\documents\visual studio 2015\Projects\ArabiaExtensions\ArabiaExtensions\obj\Debug\ArabiaExtensions.pdb
