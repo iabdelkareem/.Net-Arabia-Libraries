@@ -230,7 +230,7 @@ Value: "‎صباحاً‎ ‎٠‎٨:‎‎٥‎٦ ‎‎٢٠‎١‎٥-‎٠�
     </td>
 </tr>
 <tr>
-    <td>"dd" or "dddd"</td>
+    <td>"ddd" or "dddd"</td>
     <td>The full name of the day of the week.</td>
     <td>
         <code class="prettyprint">
