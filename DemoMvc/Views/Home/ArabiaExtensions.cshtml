@@ -1,0 +1,451 @@
+﻿@using System.Globalization
+@using ArabiaExtensions.Extensions
+
+@{
+    ViewBag.Title = "ArabiaExtensions";
+}
+
+<div class="jumbotron">
+    <h1>ArabiaExtensions Library</h1>
+    <p class="lead">Contains Extension Methods for Numeric, Date and Time which converts these types to arabic string (Also DateTime support many formats).</p>
+</div>
+
+<h3>Supported Types</h3>
+<table class="table table-striped">
+    <tr>
+        <th>Type</th>
+        <th>Input</th>
+        <th>Output</th>
+    </tr>
+    <tr>
+        <td>byte</td>
+        <td>
+            <code class="prettyprint">
+                byte x = 222;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(((byte)222).ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>sbyte</td>
+        <td>
+            <code class="prettyprint">
+                sbyte x = -120;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(((sbyte)-120).ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>Int16 (short)</td>
+        <td>
+            <code class="prettyprint">
+                short x = 21541;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(((short)21541).ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>UInt16 (ushort)</td>
+        <td>
+            <code class="prettyprint">
+                ushort x = 52369;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(((ushort)52369).ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>Int32 (int)</td>
+        <td>
+            <code class="prettyprint">
+                int x = 2000147;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(2000147.ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>UInt32 (uint)</td>
+        <td>
+            <code class="prettyprint">
+                uint x = 4000147;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(((uint)4000147).ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>Int64 (long)</td>
+        <td>
+            <code class="prettyprint">
+                long x = -8223372036854775808;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@((-8223372036854775808).ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>UInt64 (ulong)</td>
+        <td>
+            <code class="prettyprint">
+                ulong x = 18446744073709551615;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(18446744073709551615.ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>Float (float)</td>
+        <td>
+            <code class="prettyprint">
+                float x = -3.402;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(((float)-3.402).ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>Double (double)</td>
+        <td>
+            <code class="prettyprint">
+                double x = 1500.597;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(1500.597D.ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>Decimal (decimal)</td>
+        <td>
+            <code class="prettyprint">
+                decimal x = 9000587369.2458793;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@(9000587369.2458793m.ToArabiaString())</td>
+    </tr>
+    <tr>
+        <td>DateTime</td>
+        <td>
+            <code class="prettyprint">
+                DateTime x = DateTime.Now;<br />
+                x.ToArabiaString();
+            </code>
+        </td>
+        <td>@DateTime.Now.ToArabiaString()</td>
+    </tr>
+</table>
+
+<h3>Supported DateTime Formats</h3>
+
+<p></p>
+<table class="table table-striped">
+<tr>
+    <th>Format Specifier</th>
+    <th>Description</th>
+    <th>Input</th>
+    <th>Output</th>
+</tr>
+<tr>
+    <td>"d"</td>
+    <td>The day of the month, from 1 through 31.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 12, 01)).ToArabiaString("d")
+            <br/>
+            (new DateTime(2015, 12, 11)).ToArabiaString("d")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 12, 01)).ToArabiaString("d"))
+        <br/>
+        @((new DateTime(2015, 12, 11)).ToArabiaString("d"))
+    </td>
+</tr>
+<tr>
+    <td>"dd"</td>
+    <td>The day of the month, from 01 through 31.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 12, 01)).ToArabiaString("dd")
+            <br/>
+            (new DateTime(2015, 12, 11)).ToArabiaString("dd")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 12, 01)).ToArabiaString("dd"))
+        <br/>
+        @((new DateTime(2015, 12, 11)).ToArabiaString("dd"))
+    </td>
+</tr>
+<tr>
+    <td>"dd" or "dddd"</td>
+    <td>The full name of the day of the week.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 12, 01)).ToArabiaString("ddd")
+            <br/>
+            (new DateTime(2015, 12, 11)).ToArabiaString("dddd")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 12, 01)).ToArabiaString("ddd"))
+        <br/>
+        @((new DateTime(2015, 12, 11)).ToArabiaString("dddd"))
+    </td>
+</tr>
+<tr>
+    <td>"M"</td>
+    <td>The month, from 1 through 12.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01)).ToArabiaString("M")
+            <br/>
+            (new DateTime(2015, 12, 11)).ToArabiaString("M")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01)).ToArabiaString("M"))
+        <br/>
+        @((new DateTime(2015, 12, 11)).ToArabiaString("M"))
+    </td>
+</tr>
+<tr>
+    <td>"MM"</td>
+    <td>The month, from 01 through 12.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01)).ToArabiaString("MM")
+            <br/>
+            (new DateTime(2015, 12, 11)).ToArabiaString("MM")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01)).ToArabiaString("MM"))
+        <br/>
+        @((new DateTime(2015, 12, 11)).ToArabiaString("MM"))
+    </td>
+</tr>
+<tr>
+    <td>"MMM" or "MMMM"</td>
+    <td>The full name of the month.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01)).ToArabiaString("MMM")
+            <br/>
+            (new DateTime(2015, 12, 11)).ToArabiaString("MMMM")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01)).ToArabiaString("MMM"))
+        <br/>
+        @((new DateTime(2015, 12, 11)).ToArabiaString("MMMM"))
+    </td>
+</tr>
+<tr>
+    <td>"yyyy"</td>
+    <td>The year as a four-digit number.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01)).ToArabiaString("yyyy")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01)).ToArabiaString("yyyy"))
+    </td>
+</tr>
+<tr>
+    <td>"yyy"</td>
+    <td>The year as a three-digit number.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01)).ToArabiaString("yyy")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01)).ToArabiaString("yyy"))
+    </td>
+</tr>
+<tr>
+    <td>"yy"</td>
+    <td>The year as a two-digit number.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01)).ToArabiaString("yy")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01)).ToArabiaString("yy"))
+    </td>
+</tr>
+<tr>
+    <td>"h"</td>
+    <td>The hour, using a 12-hour clock from 1 to 12.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("h")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("h")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("h"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("h"))
+    </td>
+</tr>
+<tr>
+    <td>"hh"</td>
+    <td>The hour, using a 12-hour clock from 01 to 12.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("hh")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("hh")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("hh"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("hh"))
+    </td>
+</tr>
+<tr>
+    <td>"H"</td>
+    <td>The hour, using a 24-hour clock from 0 to 23.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("H")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("H")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("H"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("H"))
+    </td>
+</tr>
+<tr>
+    <td>"HH"</td>
+    <td>The hour, using a 24-hour clock from 00 to 23.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("HH")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("HH")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("HH"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("HH"))
+    </td>
+</tr>
+<tr>
+    <td>"m"</td>
+    <td>The minute, from 0 through 59.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("m")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("m")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("m"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("m"))
+    </td>
+</tr>
+<tr>
+    <td>"mm"</td>
+    <td>The minute, from 00 through 59.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("m")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("m")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("m"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("m"))
+    </td>
+</tr>
+<tr>
+    <td>"s"</td>
+    <td>The second, from 0 through 59.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("s")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("s")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("s"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("s"))
+    </td>
+</tr>
+<tr>
+    <td>"ss"</td>
+    <td>The second, from 00 through 59.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("ss")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("ss")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("ss"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("ss"))
+    </td>
+</tr>
+<tr>
+    <td>"t"</td>
+    <td>The first character of the AM/PM designator.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("t")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("t")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("t"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("t"))
+    </td>
+</tr>
+<tr>
+    <td>"tt"</td>
+    <td>The AM/PM designator.</td>
+    <td>
+        <code class="prettyprint">
+            (new DateTime(2015, 05, 01,15,20,35)).ToArabiaString("tt")
+            <br/>
+            (new DateTime(2015, 12, 11,05,08,09)).ToArabiaString("tt")
+        </code>
+    </td>
+    <td>
+        @((new DateTime(2015, 05, 01, 15, 20, 35)).ToArabiaString("tt"))
+        <br/>
+        @((new DateTime(2015, 12, 11, 05, 08, 09)).ToArabiaString("tt"))
+    </td>
+</tr>
+</table>
+
+
+@section Scripts{
+
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+}

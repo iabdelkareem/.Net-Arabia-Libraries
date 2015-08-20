@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>.Net-Arabia Libraries</h1>
+    <p class="lead">Arabia Libraries contains several libraries to support the conversion of several types as shown below to arabic string.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>ArabiaMvc</h2>
+        <p>
+            Contains overridden serializer for JavaScript serializer which convert numeric types, date and time to arabic just inherit from ArabiaController and return JsonResult as normal and see what happens (Check /Home/TestJson).
+        </p>
+        <p><a class="btn btn-default" href="/Home/ArabiaMvc">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>ArabiaExtensions</h2>
+        <p>Contains extension methods for numeric, date and time just by calling ToArabiaString method an arabic string returns (P.S: DateTime support many formats as shown below).</p>
+        <p><a class="btn btn-default" href="/Home/ArabiaExtensions">Learn more &raquo;</a>
+        </p>
+    </div>
+</div>

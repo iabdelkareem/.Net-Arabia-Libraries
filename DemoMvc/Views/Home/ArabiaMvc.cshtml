@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "ArabiaMvc";
+}
+
+<div class="jumbotron">
+    <h1>ArabiaMvc Library</h1>
+    <p class="lead">Contains ArabiaController which is responsible for override the default JsonResult behavior by inheriting from ArabiaController your JsonResult action will return Arabic numbers, date, and time.</p>
+
+
+</div>
+
+<div class="row">
+    <h3>Example</h3>
+    <pre><code class="prettyprint">
+        public class HomeController : ArabiaController
+        {
+            public JsonResult TestJson()
+            {
+              var sampleData = new {Byte = (byte)44, Short = (short)-22222, UShort = (ushort)22222, Int = 2144222, Long = 22222222222, Double = 2.5D, Float = 2.2F, Decimal = 22222222222.2m, Date = DateTime.Now};
+              return Json(sampleData, JsonRequestBehavior.AllowGet);
+            }
+        }
+    </code></pre>
+</div>
+<a class="btn btn-default" href="/Home/TestJson">Check Result</a>
+
+
+    @section Scripts{
+
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    }
